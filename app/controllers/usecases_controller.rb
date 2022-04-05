@@ -5,7 +5,7 @@ class UsecasesController < ApplicationController
   end
 
   def index
-    @usecase = Usecase.all
+    @usecases = Usecase.all
   end
 
   private
