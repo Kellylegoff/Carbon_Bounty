@@ -10,10 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_04_142502) do
+ActiveRecord::Schema.define(version: 2022_04_05_105027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "casesiots", force: :cascade do |t|
+    t.bigint "usecase_id", null: false
+    t.bigint "iotproduct_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["iotproduct_id"], name: "index_casesiots_on_iotproduct_id"
+    t.index ["usecase_id"], name: "index_casesiots_on_usecase_id"
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "company_name"
+    t.string "address"
+    t.string "phone"
+    t.string "contact_first_name"
+    t.string "contact_last_name"
+    t.string "role"
+    t.string "company_type"
+    t.string "sector"
+    t.string "siret"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_customers_on_user_id"
+  end
+
+  create_table "iotproducts", force: :cascade do |t|
+    t.string "product_name"
+    t.string "product_type"
+    t.string "constructor"
+    t.integer "eco_score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "usecases", force: :cascade do |t|
+    t.string "name"
+    t.bigint "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_usecases_on_customer_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +69,8 @@ ActiveRecord::Schema.define(version: 2022_04_04_142502) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "casesiots", "iotproducts"
+  add_foreign_key "casesiots", "usecases"
+  add_foreign_key "customers", "users"
+  add_foreign_key "usecases", "customers"
 end

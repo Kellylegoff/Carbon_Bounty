@@ -1,0 +1,2 @@
+class Iotproduct < ApplicationRecord
+end
