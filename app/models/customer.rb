@@ -1,4 +1,4 @@
 class Customer < ApplicationRecord
   belongs_to :user
-  has_many :usecases, dependant: :destroy
+  has_many :usecases, through: :customerusecases
 end
