@@ -1,5 +1,9 @@
 class UsecasesController < ApplicationController
 
+  def create
+    @usecase = Usecase.new(usecase_params)
+  end
+
   def show
     set_usecase
   end
