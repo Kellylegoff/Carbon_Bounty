@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_05_105027) do
+ActiveRecord::Schema.define(version: 2022_04_05_133140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2022_04_05_105027) do
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
+  create_table "customerusecases", force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.bigint "usecase_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_customerusecases_on_customer_id"
+    t.index ["usecase_id"], name: "index_customerusecases_on_usecase_id"
+  end
+
   create_table "iotproducts", force: :cascade do |t|
     t.string "product_name"
     t.string "product_type"
@@ -51,10 +60,8 @@ ActiveRecord::Schema.define(version: 2022_04_05_105027) do
 
   create_table "usecases", force: :cascade do |t|
     t.string "name"
-    t.bigint "customer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["customer_id"], name: "index_usecases_on_customer_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,5 +79,6 @@ ActiveRecord::Schema.define(version: 2022_04_05_105027) do
   add_foreign_key "casesiots", "iotproducts"
   add_foreign_key "casesiots", "usecases"
   add_foreign_key "customers", "users"
-  add_foreign_key "usecases", "customers"
+  add_foreign_key "customerusecases", "customers"
+  add_foreign_key "customerusecases", "usecases"
 end
