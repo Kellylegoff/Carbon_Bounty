@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'customerusecase/create'
+  get 'customerusecase/show'
+  get 'customerusecase/index'
+  get 'customerusecase/update'
+  get 'customerusecase/destroy'
+  get 'caseiots/create'
+  get 'caseiots/show'
+  get 'caseiots/index'
+  get 'caseiots/update'
+  get 'caseiots/destroy'
   # get 'iotproducts/create'# , to: and as:
   # get 'iotproducts/show'  # , to:
   # get 'iotproducts/index' # , to: faut il l'utiliser?
