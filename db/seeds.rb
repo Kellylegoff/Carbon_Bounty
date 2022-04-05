@@ -3,6 +3,7 @@
 #
 # Examples:
 #
+
 #   movies = Movie.create([{name: 'Star Wars' }, {name: 'Lord of the Rings' }])
 #   Character.createname: 'Luke', movie: movies.first)
 
@@ -37,3 +38,13 @@ usecases = Usecase.create([{name: "surveiller la qualité de l'air extérieur"},
   {name: "iréceptionner de la marchandise"},
   {name: "valoriser des déchets"},
   ])
+
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+iotproducts = Iotproduct.create([{product_name: 'Flexidry'},
+   {product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE
+    SENSOR FOR LORAWAN ®'},
+   {product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®'},
+   {product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®'},
+   {product_name: 'K-Hub'},])
+

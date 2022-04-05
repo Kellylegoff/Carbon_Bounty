@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'customerusecase/create'
+  get 'customerusecase/show'
+  get 'customerusecase/index'
+  get 'customerusecase/update'
+  get 'customerusecase/destroy'
+  get 'caseiots/create'
+  get 'caseiots/show'
+  get 'caseiots/index'
+  get 'caseiots/update'
+  get 'caseiots/destroy'
   # get 'iotproducts/create'# , to: and as:
   # get 'iotproducts/show'  # , to:
   # get 'iotproducts/index' # , to: faut il l'utiliser?
@@ -18,8 +28,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :usecases, only: [:index] do
-    resources :iotproducts, only: [:index, :show] do
-      resources :customers, only: [:new, :create]
-    end
+    resources :iotproducts, only: [:index, :show]
   end
+  resources :customers
 end
