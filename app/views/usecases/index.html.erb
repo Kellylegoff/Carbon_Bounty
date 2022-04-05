@@ -2,10 +2,6 @@
 <p>Find me in app/views/usecases/index.html.erb</p>
 <div class="container">
 
-  <%= simple_form_for [ @usecases ] do |f| %>
-    <%= f.input :content %>
-    <%= f.submit "Submit review", class: "btn btn-primary" %>
-  <% end %>
-  <%= link_to "Iot Product", usecase_iotproduct_path(@iotproducts) %>
+  <%= link_to "Iot Product", usecase_iotproducts_path %>
   <%= link_to "Home Page", root_path %>
 </div>
