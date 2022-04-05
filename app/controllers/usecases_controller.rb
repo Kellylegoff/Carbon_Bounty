@@ -1,16 +1,20 @@
 class UsecasesController < ApplicationController
-  def create
-  end
 
   def show
+    set_usecase
   end
 
   def index
+    @usecase = Usecase.all
   end
 
-  def update
+  private
+
+  def set_usecase
+    @usecase = Usecase.find(params[:id])
   end
 
-  def destroy
+  def usecase_params
+    params.require(:usecase).permit(:name)
   end
 end
