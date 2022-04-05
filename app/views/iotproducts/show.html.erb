@@ -13,6 +13,7 @@
         <%= item.constructor%>
         <h5>eco_score</h5>
         <%= item.eco_score%>
+        <%= link_to item.product_name, usecase_iotproduct_path(item) %>
       </li>
     <% end %>
   </ul>
