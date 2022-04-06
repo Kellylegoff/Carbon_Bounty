@@ -1,5 +1,6 @@
 puts "Cleaning up database..."
 Iotproduct.destroy_all
+Usecase.destroy_all
 Casesiot.destroy_all
 puts "Database cleaned"
 
