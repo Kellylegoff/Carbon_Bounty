@@ -8,8 +8,7 @@
     <% @usecases.each do |usecase| %>
       <li class="list-group-item">
         <h3>Name</h3>
-        <%= usecase.name %><br>
-        <%= link_to usecase.name, usecase_iotproducts_path(usecase) %>
+        <%= link_to usecase.name, usecase_path(usecase) %>
       </li>
     <% end %>
   </ul>

@@ -29,8 +29,7 @@ UC17 = Usecase.create({name: "télégérer une machine"})
 #   Character.create(name: 'Luke', movie: movies.first)
 
 IOTP1 = Iotproduct.create({product_name: 'Flexidry'})
-IOTP2 = Iotproduct.update({id:2, product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®',
-  product_type: "End node", constructor: "Decentlab GmbH", eco_score: "82"})
+IOTP2 = Iotproduct.create({product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®'})
 IOTP3 = Iotproduct.create({product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®'})
 IOTP4 = Iotproduct.create({product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®'})
 IOTP5 = Iotproduct.create({product_name: 'K-Hub'})
@@ -54,7 +53,7 @@ REC3_5 = Casesiot.create(iotproduct: IOTP3, usecase: UC7) # ok!
 
 REC4_1 = Casesiot.create(iotproduct: IOTP4, usecase: UC10)
 REC4_2 = Casesiot.create(iotproduct: IOTP4, usecase: UC8)
-REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # try console again
+REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # ok!
 
 REC5_1 = Casesiot.create(iotproduct: IOTP5, usecase: UC15)
 REC5_2 = Casesiot.create(iotproduct: IOTP5, usecase: UC11)
