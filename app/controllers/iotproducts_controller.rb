@@ -2,13 +2,13 @@ class IotproductsController < ApplicationController
   before_action :set_offer, only: [:show]
 
   def create
-    @Iotproduct = Iotproduct.new(offer_params)
+    @Iotproduct = Iotproduct.new(iotproduct_params)
     # @Iotproduct.user = current_user
-      # if @Iotproduct.save
-        # redirect_to iotproduct_path(@iotproduct)
-      # else
-      #  render :new
-      # end
+      if @Iotproduct.save
+        redirect_to iotproduct_path(@iotproduct)
+      else
+       render :create
+      end
   end
 
   def new
@@ -19,6 +19,11 @@ class IotproductsController < ApplicationController
   def show
     set_iotproduct
   end
+
+  # def result
+  #   # recherche des usecase et extraire les iotproducts
+
+  # end
 
   def index
     @iotproducts = Iotproduct.all
@@ -44,7 +49,7 @@ def set_iotproduct
 end
 
 def iotproduct_params
-  params.require(:iotproduct).permit(:product_name, :product_type, :constructor, :eco_score)
+  params.require(:iotproduct).permit(:product_name, :product_type, :constructor, :eco_score, :description, :photo)
 end
 
 # def index

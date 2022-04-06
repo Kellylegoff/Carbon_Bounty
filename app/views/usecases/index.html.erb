@@ -8,9 +8,8 @@
     <% @usecases.each do |usecase| %>
       <div class="col-lg-4 col-md-6 col-sm-12 card">
         <h3>Name</h3>
-        <%= usecase.name %><br>
-        <%= link_to usecase.name, usecase_iotproducts_path(usecase) %>
-      </div>
+        <%= link_to usecase.name, usecase_path(usecase) %>
+      </li>
     <% end %>
   </div>
 
@@ -18,5 +17,6 @@
 
   <%# <%= link_to "Iot Product", usecase_iotproducts_path %> %>
   <%= link_to "Home Page", root_path %>
+  <%# <%= link_to "créer un produit Iot",  iotproducts_create_path, class: "btn btn-primary" %> %>
 
 </div>

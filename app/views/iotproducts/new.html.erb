@@ -1,0 +1,18 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new iotproduct </h3>
+        <%= simple_form_for @iotproduct do |f| %>
+          <%= f.input :product_name %>
+          <%= f.input :product_type %>
+          <%= f.input :constructor %>
+          <%= f.input :description %>
+          <%= f.input :eco_score %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: 'class: "btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

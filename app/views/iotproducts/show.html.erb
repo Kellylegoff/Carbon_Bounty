@@ -11,8 +11,11 @@
         <%= item.product_type%>
         <h3>constructor</h3>
         <%= item.constructor%>
+        <h3>description</h3>
+        <%= item.description%>
         <h5>eco_score</h5>
         <%= item.eco_score%>
+        <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
         <%= link_to item.product_name, usecase_iotproduct_path(item) %>
       </li>
     <% end %>

@@ -1,11 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-
-#   movies = Movie.create([{name: 'Star Wars' }, {name: 'Lord of the Rings' }])
-#   Character.createname: 'Luke', movie: movies.first)
+puts "Cleaning up database..."
+Casesiot.destroy_all
+Iotproduct.destroy_all
+Usecase.destroy_all
+puts "Database cleaned"
 
 UC1 = Usecase.create({name: "surveiller la qualité de l'air extérieur"})
 UC2 = Usecase.create({name: "surveiller la qualité de l'air intérieur"})
@@ -29,7 +26,8 @@ UC17 = Usecase.create({name: "télégérer une machine"})
 #   Character.create(name: 'Luke', movie: movies.first)
 
 IOTP1 = Iotproduct.create({product_name: 'Flexidry'})
-IOTP2 = Iotproduct.create({product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®'})
+IOTP2 = Iotproduct.create({product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®',
+product_type: "End node", constructor: "Decentlab GmbH", eco_score: "82"})
 IOTP3 = Iotproduct.create({product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®'})
 IOTP4 = Iotproduct.create({product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®'})
 IOTP5 = Iotproduct.create({product_name: 'K-Hub'})
@@ -53,7 +51,7 @@ REC3_5 = Casesiot.create(iotproduct: IOTP3, usecase: UC7) # ok!
 
 REC4_1 = Casesiot.create(iotproduct: IOTP4, usecase: UC10)
 REC4_2 = Casesiot.create(iotproduct: IOTP4, usecase: UC8)
-REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # try console again
+REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # ok!
 
 REC5_1 = Casesiot.create(iotproduct: IOTP5, usecase: UC15)
 REC5_2 = Casesiot.create(iotproduct: IOTP5, usecase: UC11)
