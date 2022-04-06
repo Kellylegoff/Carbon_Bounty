@@ -2,16 +2,16 @@
 <p>Find me in app/views/usecases/index.html.erb</p>
 
 <div class = "container">
-  <h2><%= @usecases.name %></h2>
+  <h2>Cas d'usage</h2>
 
-  <ul class="list-group">
+  <div class="row">
     <% @usecases.each do |usecase| %>
-      <li class="list-group-item">
+      <div class="col-lg-4 col-md-6 col-sm-12 card">
         <h3>Name</h3>
         <%= link_to usecase.name, usecase_path(usecase) %>
       </li>
     <% end %>
-  </ul>
+  </div>
 
 <div class="container">
 
