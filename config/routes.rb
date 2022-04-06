@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'caseiots/index'
   get 'caseiots/update'
   get 'caseiots/destroy'
-  # get 'iotproducts/create'# , to: and as:
+  get 'iotproducts/create'
   # get 'iotproducts/show'  # , to:
   # get 'iotproducts/index' # , to: faut il l'utiliser?
   # get 'iotproducts/update'

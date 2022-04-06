@@ -44,7 +44,7 @@ def set_iotproduct
 end
 
 def iotproduct_params
-  params.require(:iotproduct).permit(:product_name, :product_type, :constructor, :eco_score)
+  params.require(:iotproduct).permit(:product_name, :product_type, :constructor, :eco_score, :description, :photo)
 end
 
 # def index
