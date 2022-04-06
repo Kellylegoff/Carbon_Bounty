@@ -29,7 +29,8 @@ UC17 = Usecase.create({name: "télégérer une machine"})
 #   Character.create(name: 'Luke', movie: movies.first)
 
 IOTP1 = Iotproduct.create({product_name: 'Flexidry'})
-IOTP2 = Iotproduct.create({product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®'})
+IOTP2 = Iotproduct.update({id:2, product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®',
+  product_type: "End node", constructor: "Decentlab GmbH", eco_score: "82"})
 IOTP3 = Iotproduct.create({product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®'})
 IOTP4 = Iotproduct.create({product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®'})
 IOTP5 = Iotproduct.create({product_name: 'K-Hub'})

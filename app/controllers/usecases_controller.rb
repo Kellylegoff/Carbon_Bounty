@@ -24,6 +24,6 @@ class UsecasesController < ApplicationController
   end
 
   def usecase_params
-    params.require(:usecase).permit(:name)
+    params.require(:usecase).permit(:name, :photo)
   end
 end
