@@ -1,7 +1,16 @@
 // Specific CSS for your home-page
 body{
-
-  background-color: $carbon_green_light_3;
+ text-align:center;
+ // Line 1
+  display:flex;
+ // Line 2
+  flex-direction:column;
+ // Line 3
+  min-height:100vh;
+  background-color: $carbon_orange_light_3;
+}
+.wrapper{
+  flex:1;
 }
 
 .logo{
@@ -17,6 +26,8 @@ body{
 .home-container{
 
   margin: 10px 300px;
+  color: white;
+  font-size: 20px;
 
 }
 
