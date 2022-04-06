@@ -50,7 +50,7 @@ REC3_5 = Casesiot.create(iotproduct: IOTP3, usecase: UC7) # ok!
 
 REC4_1 = Casesiot.create(iotproduct: IOTP4, usecase: UC10)
 REC4_2 = Casesiot.create(iotproduct: IOTP4, usecase: UC8)
-REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # try console again
+REC4_3 = Casesiot.create(iotproduct: IOTP4, usecase: UC9) # ok!
 
 REC5_1 = Casesiot.create(iotproduct: IOTP5, usecase: UC15)
 REC5_2 = Casesiot.create(iotproduct: IOTP5, usecase: UC11)
