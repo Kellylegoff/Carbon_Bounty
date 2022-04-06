@@ -1,7 +1,7 @@
 puts "Cleaning up database..."
+Casesiot.destroy_all
 Iotproduct.destroy_all
 Usecase.destroy_all
-Casesiot.destroy_all
 puts "Database cleaned"
 
 UC1 = Usecase.create({name: "surveiller la qualité de l'air extérieur"})
