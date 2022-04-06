@@ -1,4 +1,20 @@
 <h1>Iotproducts#index</h1>
 <p>Find me in app/views/iotproducts/index.html.erb</p>
-  <%= link_to "Customers", new_usecase_iotproduct_customer_path(@iotproduct) %>
-  <%= link_to "Home Page", root_path %>
+<div class = "container">
+  <ul class="list-group">
+    <% @iotproducts.each do |item| %>
+      <li class="list-group-item">
+        <h3>product_name</h3>
+        <%= item.product_name%>
+
+
+        <%# <h3>product_type</h3>
+        <%= item.product_type%>
+        <%# <h3>constructor</h3>
+        <%= item.constructor%>
+        <%# <h5>eco_score</h5>
+        <%= item.eco_score%>
+      </li>
+    <% end %>
+  </ul>
+</div>

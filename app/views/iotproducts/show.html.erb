@@ -1,2 +1,20 @@
 <h1>Iotproducts#show</h1>
-<p>Find me in app/views/iotproducts/show.html.erb</p>
+<div class = "container">
+  <h2><%= @iotproducts.usescases.name %></h2>
+
+  <ul class="list-group">
+    <% @usecases.iotproducts.each do |item| %>
+      <li class="list-group-item">
+        <h3>product_name</h3>
+        <%= item.product_name%>
+        <h3>product_type</h3>
+        <%= item.product_type%>
+        <h3>constructor</h3>
+        <%= item.constructor%>
+        <h5>eco_score</h5>
+        <%= item.eco_score%>
+        <%= link_to item.product_name, usecase_iotproduct_path(item) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
