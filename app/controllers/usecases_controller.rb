@@ -6,11 +6,15 @@ class UsecasesController < ApplicationController
 
   def show
     set_usecase
-    @find_usecase = Casesiot.where(usecase: @usecase.id)
-    @iotproduct = Iotproduct.where(id: @rec.iotproduct_id)
-    each do |element|
-      element.id = @rec.iotproduct
-    end
+    # @find_usecase = Casesiot.where(usecase: @usecase.id)
+    # @find_iotproduct = Iotproduct.where(id: @find_usecase.iotproduct_id)
+    # @rec = Iotproduct.joins(:usecase, :product)
+    # User.joins(posts: [:comments])
+    # # LEFT JOIN bookmarks
+    # # ON bookmarks.bookmarkable_type = 'Post' AND bookmarks.user_id = users.id
+    # each do |element|
+    #   element.id = @rec.iotproduct
+    # end
   end
 
   def index

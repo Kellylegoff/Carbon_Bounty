@@ -2,22 +2,21 @@
 <p>Find me in app/views/usecases/index.html.erb</p>
 
 <div class = "container">
-  <h2><%= @usecases.name %></h2>
+  <h2>Cas d'usage</h2>
 
-  <ul class="list-group">
+  <div class="row">
     <% @usecases.each do |usecase| %>
-      <li class="list-group-item">
+      <div class="col-lg-4 col-md-6 col-sm-12 card">
         <h3>Name</h3>
-        <%= usecase.name %><br>
-        <%= link_to usecase.name, usecase_iotproducts_path(usecase) %>
+        <%= link_to usecase.name, usecase_path(usecase) %>
       </li>
     <% end %>
-  </ul>
+  </div>
 
 <div class="container">
 
   <%# <%= link_to "Iot Product", usecase_iotproducts_path %>
   <%= link_to "Home Page", root_path %>
-  <%= link_to "créer un produit Iot",  iotproducts_create_path, class: "btn btn-primary" %>
+  <%# <%= link_to "créer un produit Iot",  iotproducts_create_path, class: "btn btn-primary" %> %>
 
 </div>
