@@ -6,6 +6,11 @@ class UsecasesController < ApplicationController
 
   def show
     set_usecase
+    @find_usecase = Casesiot.where(usecase: @usecase.id)
+    @iotproduct = Iotproduct.where(id: @rec.iotproduct_id)
+    each do |element|
+      element.id = @rec.iotproduct
+    end
   end
 
   def index

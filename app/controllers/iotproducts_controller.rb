@@ -20,6 +20,11 @@ class IotproductsController < ApplicationController
     set_iotproduct
   end
 
+  # def result
+  #   # recherche des usecase et extraire les iotproducts
+
+  # end
+
   def index
     @iotproducts = Iotproduct.all
   end
