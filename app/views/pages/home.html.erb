@@ -1,7 +1,19 @@
-<div class="carbon-background logo">
-  <div class="container">
-    <h1>Pages#home</h1>
-    <%= link_to "Use Cases", usecases_path %>
-    <%# <%= cl_image_tag("f9rsiiz1uaw0vu0aowap",width: 400, height: 300, crop: :fill) %>
+
+<div class="home-container">
+  <div class="banner" style="border-radius: 15px; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/mavana/image/upload/v1649249211/CarbonBounty/Pitch_Kel_Le_Wagon_lyj2ik.png);">
+    <div class="container">
+      <h1>Carbon Bounty</h1>
+    </div>
   </div>
+  <div class="container">
+    <h1 class="text-center pt-4">Un peu plus à notre sujet...</h1>
+    <p>Dirigeants, vous êtes à la recherche d’un outil simple pour réduire l’empreinte carbone de votre entreprise ? Vous avez peut-être réalisé le calcul de votre empreinte carbone à l’aide d’un outil en ligne ou d’un cabinet de conseil. Vous ne savez pas quelles actions concrètes mettre en place pour réduire l’empreinte environnementale de votre entreprise ? Trouvez rapidement des réponses ici.</p>
+    <br>
+    <p>La raison d’être de Carbon Bounty est d’aider les entreprises et collectivités à identifier dans leurs activités quotidiennes les émissions de gaz à effet de serre qui peuvent être réduites à l’aide d’objets connectés. Cet outil doit permettre aux organisations de cartographier de manière intuitive leurs activités et de recevoir des recommandations de solutions connectées, écoresponsables et pertinentes pour leur situation
+
+Carbon Bounty® est un logiciel d’aide à la décision pour les porteurs de projets qui souhaitent prendre en compte la triple dimension financière, environnementale et sociétale de leurs projets</p>
+    <%= link_to "Cas d'usages", usecases_path, class: "btn btn-ghost mb-5" %>
+  </div>
+
+
 </div>
