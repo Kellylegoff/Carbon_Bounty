@@ -1,22 +1,25 @@
-<h1>Iotproducts#show</h1>
 <div class = "container">
-  <%# <h2><%= @iotproducts.usescases.name %></h2>
-
-  <ul class="list-group">
     <% @iotproduct %>
-      <li class="list-group-iotproduct">
-        <h3>product_name</h3>
-        <%= @iotproduct.product_name%>
-        <h3>product_type</h3>
-        <%= @iotproduct.product_type%>
-        <h3>constructor</h3>
-        <%= @iotproduct.constructor%>
-        <h3>description</h3>
-        <%= @iotproduct.description%>
-        <h5>eco_score</h5>
-        <%= @iotproduct.eco_score%>
-        <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
-        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct) %>
-      </li>
-  </ul>
+      <div class="fiche-produit d-flex">
+         <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
+        <ul>
+            <li>
+            <%= @iotproduct.product_name%>
+            </li>
+            <li>
+            <%= @iotproduct.product_type%>
+            </li>
+            <li>
+            <%= @iotproduct.constructor%>
+            </li>
+            <li>
+            <%= @iotproduct.description%>
+            </li>
+            <li>
+            <%= @iotproduct.eco_score%>
+            </li>
+        </ul>
+      </div>
+      <%= link_to "Choisir cette solution", new_casesiot_customer_path(@casesiot) %>
+      <em class = "btn"><%= link_to "Revoir les autres recommandations", usecase_path(@casesiot.usecase) %></em>
 </div>
