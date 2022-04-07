@@ -2,7 +2,8 @@
 <div>
   <% @usecase.casesiots.each do |result|%>
   <%= name = result.iotproduct.product_name %>
-  <%= link_to "Decouvrir la fiche produit", usecase_iotproduct_path(@usecase, result.iotproduct.id) %>
+  <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result, result.iotproduct.id) %>
+  <%= link_to "Choisir cette solution", new_casesiot_customer_path(result) %>
   <% end %>
-  <%= link_to "Choisir cette solution", new_customer_path(@usecase) %>
+
 </div>

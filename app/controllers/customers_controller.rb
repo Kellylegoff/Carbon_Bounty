@@ -14,6 +14,7 @@ class CustomersController < ApplicationController
   def new
     @customer = Customer.new
     @user = current_user
+    @casesiot = Casesiot.find(params[:casesiot_id])
   end
 
   def show
