@@ -4,8 +4,9 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     @customer.user = current_user
+    @casesiot = Casesiot.find(params[:casesiot_id])
       if @customer.save
-        redirect_to customer_path(@customer)
+        redirect_to casesiot_customer_path(@casesiot, @customer)
       else
         render :new
       end
