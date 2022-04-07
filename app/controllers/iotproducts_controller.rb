@@ -1,5 +1,5 @@
 class IotproductsController < ApplicationController
-  before_action :set_offer, only: [:show]
+  before_action :set_iotproduct, only: [:show]
 
   def create
     @Iotproduct = Iotproduct.new(iotproduct_params)
@@ -7,7 +7,7 @@ class IotproductsController < ApplicationController
       if @Iotproduct.save
         redirect_to iotproduct_path(@iotproduct)
       else
-       render :create
+        render :create
       end
   end
 
