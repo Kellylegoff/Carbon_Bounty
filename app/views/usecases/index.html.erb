@@ -1,12 +1,10 @@
-<h1>Usecases#index</h1>
-<p>Find me in app/views/usecases/index.html.erb</p>
 
 <div class = "container">
   <h2>Cas d'usage</h2>
 
   <div class="row">
     <% @usecases.each do |usecase| %>
-      <div class="col-lg-4 col-md-6 col-sm-12 card">
+      <div class="card-category col-lg-4 col-md-6 col-sm-12 card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/mavana/image/upload/v1649251258/CarbonBounty/iotproduct4KHUB_svokwa.jpg)">
         <%= link_to usecase.name, usecase_path(usecase) %>
       </div>
     <% end %>
