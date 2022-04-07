@@ -45,7 +45,7 @@ end
 private
 
 def set_iotproduct
-  @iotpruduct = Iotproduct.find(params[:id])
+  @iotproduct = Iotproduct.find(params[:id])
 end
 
 def iotproduct_params
