@@ -15,8 +15,8 @@
         <%= item.description%>
         <h5>eco_score</h5>
         <%= item.eco_score%>
-        <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
-        <%= link_to item.product_name, usecase_iotproduct_path(item) %>
+        <%# <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %> %>
+        <%# <%= link_to item.product_name, usecase_iotproduct_path(item) %> %>
       </li>
     <% end %>
   </ul>
