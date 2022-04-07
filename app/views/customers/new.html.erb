@@ -4,7 +4,7 @@ new customer
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="rounded p-3 shadow">
         <h3>Creez votre fiche</h3>
-        <%= simple_form_for(@customer, :defaults => { :input_html => { :class => "text-color" } }) do |f| %>
+        <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color" } }) do |f| %>
           <%= f.input :company_name %>
           <%= f.input :address %>
           <%= f.input :phone %>
