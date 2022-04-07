@@ -1,23 +1,22 @@
 <h1>Iotproducts#show</h1>
 <div class = "container">
-  <h2><%= @iotproducts.usescases.name %></h2>
+  <%# <h2><%= @iotproducts.usescases.name %></h2> %>
 
   <ul class="list-group">
-    <% @usecases.iotproducts.each do |item| %>
-      <li class="list-group-item">
+    <% @iotproduct %>
+      <li class="list-group-iotproduct">
         <h3>product_name</h3>
-        <%= item.product_name%>
+        <%= @iotproduct.product_name%>
         <h3>product_type</h3>
-        <%= item.product_type%>
+        <%= @iotproduct.product_type%>
         <h3>constructor</h3>
-        <%= item.constructor%>
+        <%= @iotproduct.constructor%>
         <h3>description</h3>
-        <%= item.description%>
+        <%= @iotproduct.description%>
         <h5>eco_score</h5>
-        <%= item.eco_score%>
-        <%# <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %> %>
-        <%# <%= link_to item.product_name, usecase_iotproduct_path(item) %> %>
+        <%= @iotproduct.eco_score%>
+        <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct) %>
       </li>
-    <% end %>
   </ul>
 </div>
