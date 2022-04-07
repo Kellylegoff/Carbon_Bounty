@@ -5,4 +5,5 @@
   <% @usecase.casesiots.each do |result|%>
   <%= result.iotproduct.product_name %>
   <% end %>
+  <%= link_to "Choisir cette solution", new_customer_path(@usecase) %>
 </div>
