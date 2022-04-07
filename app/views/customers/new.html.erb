@@ -1,7 +1,7 @@
 new customer
 <div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-5 m-2">
       <div class="rounded p-3 shadow">
         <h3>Creez votre fiche</h3>
         <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color" } }) do |f| %>
@@ -14,8 +14,29 @@ new customer
           <%= f.input :company_type %>
           <%= f.input :siret %>
           <%= f.input :sector %>
-          <%= f.submit class: "btn btn-primary" %>
+          <%= f.submit "Créer la fiche", class: "btn btn-primary" %>
         <% end %>
+      </div>
+    </div>
+    <div class="col-lg-5 m-2 rounded p-3 shadow">
+      <div class="container">
+        <h1>Cas d'usage</h1>
+        <p><%= @casesiot.usecase.name %></p>
+      </div>
+      <div class="container mt-5">
+        <h1>Iotproducts</h1>
+        <% @casesiot.iotproduct %>
+        <h3>Nom</h3>
+        <%= @casesiot.iotproduct.product_name%>
+        <h3>Type</h3>
+        <%= @casesiot.iotproduct.product_type%>
+        <h3>Constructeur</h3>
+        <%= @casesiot.iotproduct.constructor%>
+        <h3>Description</h3>
+        <%= @casesiot.iotproduct.description%>
+        <h5>Eco_score</h5>
+        <%= @casesiot.iotproduct.eco_score%>
+        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct) %>
       </div>
     </div>
   </div>
