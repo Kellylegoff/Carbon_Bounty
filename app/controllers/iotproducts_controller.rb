@@ -18,6 +18,7 @@ class IotproductsController < ApplicationController
 
   def show
     set_iotproduct
+    @casesiot = Casesiot.find(params[:casesiot_id])
   end
 
   # def result
