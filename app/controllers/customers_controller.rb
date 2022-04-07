@@ -1,13 +1,13 @@
 class CustomersController < ApplicationController
-  before_action :set_customer, only: [:create, :show, :update, :destroy]
+  before_action :set_customer, only: [ :show, :update, :destroy]
 
   def create
     @customer = Customer.new(customer_params)
     @customer.user = current_user
       if @customer.save
-        redirect_to customer_show_path(@customer)
+        redirect_to customer_path(@customer)
       else
-        render :create
+        render :new
       end
   end
 
