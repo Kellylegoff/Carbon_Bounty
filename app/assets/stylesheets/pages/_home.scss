@@ -7,7 +7,8 @@ body{
   flex-direction:column;
  // Line 3
   min-height:100vh;
-  background-color: $carbon_orange_light_2;
+  background-color: $carbon_beige;
+
 }
 .wrapper{
   flex:1;
@@ -21,6 +22,7 @@ body{
   height: 100vh;
   z-index: -1;
   position: absolute;
+
 }
 
 .home-container{
