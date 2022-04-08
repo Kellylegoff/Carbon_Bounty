@@ -1,5 +1,5 @@
-<h2><%= @usecase.name %></h2>
-<div>
+<h2>Afin de <%= @usecase.name %> nous vous recommandons les solutions connectées suivantes:</h2>
+<div class = "d-flex">
   <% @usecase.casesiots.each do |result|%>
   <div>
   <%= render '/iotproducts/ficheproduit', result: result.iotproduct %>

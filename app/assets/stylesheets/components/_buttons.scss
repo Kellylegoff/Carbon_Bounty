@@ -40,7 +40,32 @@
   color: white;
 }
 
-.btn-orangeandgreen {
+.btn-orange {
+  font-family: "Poppins", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  background-color: $carbon_orange;
+  color: antiquewhite;
+  border-radius: 40px 40px 40px 40px;
+  width: auto;
+  padding: 8px 24px;
+}
+
+.btn-black {
+  font-family: "Poppins", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  background-color: $carbon_black;
+  border-radius: 40px 40px 40px 40px;
+  width: auto;
+  padding: 10px;
+}
+
+.btn-green {
   font-family: "Poppins", Sans-serif;
   font-size: 20px;
   font-weight: 600;
