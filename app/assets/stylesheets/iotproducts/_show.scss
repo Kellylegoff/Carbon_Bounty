@@ -1,8 +1,62 @@
+.container-product {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.fiche {
+  //background: "https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png";
+ // background-image: image-url('https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png');
+ background-position: center;
+ // background-size: contain;
+ background-size: cover;
+ background-repeat: no-repeat;
+ // height: 300;
+ width: 100%;
+ text-shadow: 7em;
+}
+// width:400px;height:200px;
+
+.produit {
+  flex-direction: row-reverse;
+  padding: 3%;
+}
+
+// .image {
+//   padding: 2%;
+// }
+
+.liste {
+  padding-right: 2%;
+}
+
+.description {
+  text-align: start;
+  padding: 2%;
+}
+
 ul {
   list-style-type: none;
   list-style-position: inside;
 }
 
 li {
+  font-size: 20px;
+}
+
+h5 {
+  color: $carbon_green;
+  text-transform: lowercase;
+}
+
+h6 {
+  color: $carbon_beige;
+  text-align: left;
+}
+
+p {
+  color: $carbon_black;
   font-weight: bold;
+  -webkit-text-stroke: thin;
+  text-align: start;
 }

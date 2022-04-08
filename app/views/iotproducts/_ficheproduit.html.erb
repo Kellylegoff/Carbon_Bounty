@@ -1,0 +1,18 @@
+<div class = "container-product">
+<div class="fiche" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
+<div class = "produit d-flex">
+        <div class = "image"><%= cl_image_tag result.photo.key, height: 300, width: 400, crop: :fill%></div>
+        <div class = "liste">
+        <ul>
+            <li>
+              <h5><%= result.product_name%></h5>
+            </li>
+            <li>
+              <h6>Type de produit: </h6>
+              <p><%= result.product_type%></p>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
