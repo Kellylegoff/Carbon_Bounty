@@ -1,25 +1,36 @@
-<div class = "container">
+<div class = "container-product">
     <% @iotproduct %>
-      <div class="fiche-produit d-flex">
-         <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill %>
+
+      <div class="fiche" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
+         <div class = "produit d-flex">
+         <div class = "image"><%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill%></div>
+        <div class = "liste">
         <ul>
             <li>
-            <%= @iotproduct.product_name%>
+              <h5><%= @iotproduct.product_name%></h5>
             </li>
             <li>
-            <%= @iotproduct.product_type%>
+              <h6>Type de produit: </h6>
+              <p><%= @iotproduct.product_type%></p>
             </li>
             <li>
-            <%= @iotproduct.constructor%>
+              <h6>Constructeur: </h6>
+              <p><%= @iotproduct.constructor%></p>
             </li>
             <li>
-            <%= @iotproduct.description%>
-            </li>
-            <li>
-            <%= @iotproduct.eco_score%>
+              <h6>Eco score: </h6>
+              <p><%= @iotproduct.eco_score%></p>
             </li>
         </ul>
+        </div>
+        </div>
+        <div class = "description">
+          <h6>Description du produit: </h6>
+          <p><%= @iotproduct.description%></p>
+        </div>
       </div>
+      <div class = "d-flex flex-column">
       <%= link_to "Choisir cette solution", new_casesiot_customer_path(@casesiot) %>
-      <em class = "btn"><%= link_to "Revoir les autres recommandations", usecase_path(@casesiot.usecase) %></em>
+      <%= link_to "Revoir les autres recommandations", usecase_path(@casesiot.usecase) %>
+      </div>
 </div>
