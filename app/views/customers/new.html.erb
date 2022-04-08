@@ -18,13 +18,13 @@
         <% end %>
       </div>
     </div>
-    <div class="col-lg-5 m-2 rounded p-3 shadow">
+    <div class="col-lg-5 m-2 p-3 shadow d-flex flex-column">
 
       <div class="container">
         <h1>Votre Cas d'usage</h1>
         <h3><%= @casesiot.usecase.name %></p>
       </div>
-      <div class="container mt-5" style="margin-bottom: 167px;">
+      <div class="container mt-5" >
         <h1>Produit IoT sélectionné </h1>
         <% @casesiot.iotproduct %>
         <h3>Nom</h3>
@@ -39,7 +39,9 @@
         <%= @casesiot.iotproduct.eco_score%>
 
       </div>
-      <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct), class: "btn-orange" %>
+      <div class="mt-auto mb-2">
+        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct), class: "btn-orange" %>
+      </div>
     </div>
   </div>
 </div>
