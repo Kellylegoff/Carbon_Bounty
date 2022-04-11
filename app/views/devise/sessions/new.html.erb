@@ -1,8 +1,7 @@
-<div class="home-container">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-4">
+    <div class="col-12 col-sm-4 my-3 p-3 form-login">
       <h2>Se connecter</h2>
-          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), :defaults => { :input_html => { :class => "text-color" } }) do |f| %>
             <div class="form-inputs">
               <%= f.input :email,
                 required: false,
@@ -15,7 +14,7 @@
             </div>
 
                 <div class="form-actions">
-                  <%= f.button :submit, "Se connecter"%>
+                  <%= f.button :submit, "Se connecter", class: "btn-black" %>
                 </div>
             <% end %>
 
@@ -23,4 +22,3 @@
           <%= render "devise/shared/links" %>
     </div>
   </div>
-</div>
