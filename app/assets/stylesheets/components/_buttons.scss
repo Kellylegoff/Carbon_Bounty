@@ -46,11 +46,12 @@
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.3em;
-  background-color: $carbon_orange;
+  background-color: $carbon_orange_light_3;
   color: antiquewhite;
   border-radius: 40px 40px 40px 40px;
   width: auto;
   padding: 8px 24px;
+  border : none;
 }
 
 .btn-black {
@@ -64,6 +65,7 @@
   width: auto;
   padding: 8px 24px;
   color: antiquewhite;
+  border : none;
 }
 
 .btn-green {
@@ -72,9 +74,20 @@
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.3em;
-  background-color: $carbon_green;
+  background-color: $carbon_green_light_3;
   border-radius: 40px 40px 40px 40px;
   width: auto;
   padding: 8px 24px;
   color: antiquewhite;
+  border : none;
+}
+
+ .btn-green:hover {
+  background-color: $carbon_green;
+}
+.btn-orange:hover {
+  background-color: $carbon_orange;
+}
+.btn-black:hover{
+  background-color: $carbon_orange;
 }
