@@ -21,6 +21,12 @@
               <h6>Eco score: </h6>
               <p><%= @iotproduct.eco_score%></p>
             </li>
+            <li>
+              <h6>Ce produit repond egalement à d’autres cas d’usage: </h6>
+              <p><% @iotproduct.casesiots.each do |result|%></p>
+              <p><%= result.usecase.name %></p>
+              <% end %>
+            </li>
         </ul>
         </div>
         </div>
