@@ -74,20 +74,34 @@
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.3em;
-  background-color: $carbon_green_light_3;
+  background-color: $carbon_green_light_2;
   border-radius: 40px 40px 40px 40px;
   width: auto;
   padding: 8px 24px;
-  color: antiquewhite;
+  color: $carbon_black;
   border : none;
 }
 
- .btn-green:hover {
+.btn-green:hover {
   background-color: $carbon_green;
 }
+
 .btn-orange:hover {
   background-color: $carbon_black;
 }
-.btn-black:hover{
+
+.btn-black:hover {
   background-color: $carbon_orange;
+}
+
+.btn-simple {
+  text-decoration: none;
+  color: $carbon_black;
+}
+
+.btn-simple:hover {
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: underline;
+  text-decoration-color: orange;
+  text-underline-offset: 5px;
 }
