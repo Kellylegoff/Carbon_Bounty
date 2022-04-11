@@ -19,16 +19,13 @@
 
 .card-product {
   overflow: hidden;
-  height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
   border-radius: 11px;
   padding: 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  color: $carbon_black;
+  color: $carbon_beige;
 }
 
 .card-product img {
