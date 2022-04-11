@@ -10,4 +10,4 @@ application.load(definitionsFromContext(context))
 
 console.log("hello index");
 
-application.register("visibility", VisibilityController)
+// application.register("visibility", VisibilityController)
