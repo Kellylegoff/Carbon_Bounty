@@ -36,18 +36,53 @@ body{
   // color: white;
   font-size: 20px;
   font-weight: bold;
+  background-color: $carbon_orange;
   .simulation {
-    background-color: $carbon_orange;
     padding-top: 80px;
     p {
       text-align: center;
       color: beige;
     }
     .demarrage {
+      position: relative;
+      // bottom: 50%;
+      // right: 50%;
       text-align: -webkit-center;
     }
   }
 
+  .about {
+    padding: 4%;
+    background-color: white;
+    h3 {
+      border-top: solid;
+      border-color: $carbon_orange;
+      padding-top: 3%;
+      color: $carbon_black;
+      padding-bottom: 4%;
+      text-align: start;
+    }
+    p {
+      text-align: start;
+    }
+  }
+
+  .projet {
+    padding: 4%;
+    background-color: $carbon_beige;
+
+    h3 {
+      border-top: solid;
+      padding: 3%;
+      border-color: $carbon_orange;
+      text-align: start;
+    }
+  }
+
+  .contact {
+    height: 400px;
+    list-style-type: none;
+  }
   // , width: 200, height: 200, crop: :fit
 }
 
