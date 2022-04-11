@@ -8,8 +8,13 @@ body{
  // Line 3
   min-height:100vh;
   background-color: $carbon_beige;
-
 }
+
+.form-control {
+  background-color: $carbon_beige;
+  border-radius: 5px;
+}
+
 .wrapper{
   flex:1;
 }
@@ -27,11 +32,23 @@ body{
 
 .home-container{
 
-  margin: 10px 300px;
-  color: white;
+  // margin: 10px 300px;
+  // color: white;
   font-size: 20px;
   font-weight: bold;
+  .simulation {
+    background-color: $carbon_orange;
+    padding-top: 80px;
+    p {
+      text-align: center;
+      color: beige;
+    }
+    .demarrage {
+      text-align: -webkit-center;
+    }
+  }
 
+  // , width: 200, height: 200, crop: :fit
 }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {

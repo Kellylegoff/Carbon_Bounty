@@ -1,24 +1,26 @@
 
 <div class="home-container">
-  <div class="container" style= "background-color: $carbon_orange">
-    <div class="banner" style="border-radius: 15px; background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/mavana/image/upload/v1649264996/CarbonBounty/Groupe_187_wftmpl.png);">
-      <%# <div class="container">
-      </div> %>
-    </div>
-  </div>
-    <section>
+    <section class = "simulation d-flex">
+      <div class="demarrage">
       <h3>Carbon Bounty</h3>
       <p>Carbon Bounty, trouver le meilleur compromis entre efficacité environnementale, économique, technologique et social.</p>
+      <%= link_to "Commencez votre simulation gratuite", usecases_path %>
+      </div>
+      <div>
+      <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649264996/CarbonBounty/Groupe_187_wftmpl.png", class: "animate__animated animate__slideInRight animate__delay-1s", width: 700, height: 600, crop: :fit %>
+      </div>
     </section>
+    <section class = "about">
+
     <div class="container" style= "background-color: $carbon_orange" >
-      <h1 class="text-center pt-4"> En savoir peu plus au sujet de Carbon Bounty ...</h1>
+      <h1 class="text-center pt-4"> En savoir peu plus au sujet de Carbon Bounty ...</h1><a id = "about"></a>
         <p>Dirigeants, vous êtes à la recherche d’un outil simple pour réduire l’empreinte carbone de votre entreprise ? Vous avez peut-être réalisé le calcul de votre empreinte carbone à l’aide d’un outil en ligne ou d’un cabinet de conseil.
           Vous ne savez pas quelles actions concrètes mettre en place pour réduire l’empreinte environnementale de votre entreprise ? Trouvez rapidement des réponses ici.</p>
           <br>
            <p>La raison d’être de Carbon Bounty est d’aider les entreprises et collectivités à identifier dans leurs activités quotidiennes les émissions de gaz à effet de serre qui peuvent être réduites à l’aide d’objets connectés.
           Cet outil doit permettre aux organisations de cartographier de manière intuitive leurs activités et de recevoir des recommandations de solutions connectées, écoresponsables et pertinentes pour leur situation
           Carbon Bounty® est un logiciel d’aide à la décision pour les porteurs de projets qui souhaitent prendre en compte la triple dimension financière, environnementale et sociétale de leurs projets</p>
-          <%= link_to "Démarrer une simulation", usecases_path, class: "btn btn-ghost mb-5" %>
-     </div>
-  <a id = "about"></a>
+    </div>
+    </section>
+
 </div>
