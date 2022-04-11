@@ -11,11 +11,11 @@
               <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-              <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              <%# <%= f.input :se_souvenir_de_moi, as: :boolean if devise_mapping.rememberable? %>
             </div>
 
                 <div class="form-actions">
-                  <%= f.button :submit, "s'inscrire"%>
+                  <%= f.button :submit, "Se connecter"%>
                 </div>
             <% end %>
 
