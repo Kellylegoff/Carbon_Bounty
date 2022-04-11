@@ -15,5 +15,5 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 
-import VisibilityController from "./visibility_controller"
-application.register("visibility", VisibilityController)
+// import VisibilityController from "./visibility_controller"
+// application.register("visibility", VisibilityController)
