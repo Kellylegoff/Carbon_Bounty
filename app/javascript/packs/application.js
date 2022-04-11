@@ -13,10 +13,3 @@ Turbolinks.start()
 ActiveStorage.start()
 import "controllers"
 import "bootstrap"
-
-<<<<<<< HEAD
- import { VisibilityController }  from "visibility_controller"
- VisibilityController()
-// application.register("visibility", VisibilityController)
-=======
->>>>>>> 553a0eb2946e7ad8ee866566fabb41af6c9de522
