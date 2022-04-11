@@ -3,9 +3,9 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "hideable" ]
 
-  connect() {
-    console.log('Hello, Stimulus!');
-  }
+  // connect() {
+  //   console.log('Hello, visibility!');
+  // }
 
   showTargets() {
     this.hideableTargets.forEach(el => {

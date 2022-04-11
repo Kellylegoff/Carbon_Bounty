@@ -11,10 +11,9 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
 import "controllers"
 import "bootstrap"
 
-// import { VisibilityController } from "./visibility_controller"
-// VisibilityController()
-// // application.register("visibility", VisibilityController)
+ import { VisibilityController }  from "visibility_controller"
+ VisibilityController()
+// application.register("visibility", VisibilityController)

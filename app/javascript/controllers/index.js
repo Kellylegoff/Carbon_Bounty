@@ -8,8 +8,6 @@ const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
 
-console.log("hello");
+console.log("hello index");
 
-import { VisibilityController } from "./visibility_controller"
-// VisibilityController()
 application.register("visibility", VisibilityController)
