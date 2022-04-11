@@ -1,7 +1,15 @@
 
 <div class = "container">
 
-<h2 class="text-center m-3 animate__animated animate__fadeInDown">Cas d'usages</h2>
+  <h2 class="text-center m-3 animate__animated animate__fadeInDown">Cas d'usages</h2>
+  <%= form_tag usecases_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control text-color",
+      placeholder: "Trouvez un cas d'usage..."
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
   <div class="row justify-content-center">
     <% @usecases.each do |usecase| %>
 

@@ -1,5 +1,4 @@
 class UsecasesController < ApplicationController
-
   def create
     @usecase = Usecase.new(usecase_params)
   end
@@ -18,7 +17,12 @@ class UsecasesController < ApplicationController
   end
 
   def index
-    @usecases = Usecase.all
+    if params[:query].present?
+      @usecases = Usecase.search_by_use_cases(params[:query])
+    else
+      @usecases = Usecase.all
+    end
+    params[:query] = ""
   end
 
   private
