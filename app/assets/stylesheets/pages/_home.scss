@@ -44,8 +44,7 @@ body{
       color: beige;
     }
     .demarrage {
-      position: relative;
-      // bottom: 50%;
+      padding-top: 10%;
       // right: 50%;
       text-align: -webkit-center;
     }
@@ -82,6 +81,11 @@ body{
   .contact {
     height: 400px;
     list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: $carbon_black;
+    }
   }
   // , width: 200, height: 200, crop: :fit
 }
