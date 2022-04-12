@@ -6,7 +6,9 @@
 
       <div class="fiche" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
          <div class = "produit d-flex">
+         <% if @iotproduct.photo.attached? %>
          <div class = "image"><%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill%></div>
+         <% end %>
         <div class = "liste">
         <ul>
             <li>

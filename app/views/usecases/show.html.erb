@@ -1,9 +1,13 @@
 <h2>Afin de <%= @usecase.name %> nous vous recommandons les solutions connectées suivantes:</h2>
 <div class = "container col-6">
-  <% @usecase.casesiots.each do |result|%>
+
+  <% @results.each do |result|%>
   <div>
-  <%= render '/iotproducts/ficheproduit', result: result.iotproduct %>
-    <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result, result.iotproduct.id), class: "btn-green" %>
+  <%= render '/iotproducts/ficheproduit', result: result.first %>
+    <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result.last, result.first), class: "btn-green" %>
     </div>
     <% end %>
 </div>
+
+
+<%# @usecase.casesiots.iotproduct.eco_score.sort.reverse %>

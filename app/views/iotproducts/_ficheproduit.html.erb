@@ -1,7 +1,9 @@
 <div class = "container-product">
   <section class="fiche col" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
     <div class = "produit">
+      <% if  result.photo.attached?%>
       <div class = "image"><%= cl_image_tag result.photo.key, height: 300, width: 400, crop: :fill%></div>
+      <% end %>
         <div class = "liste">
           <ul>
             <li>
