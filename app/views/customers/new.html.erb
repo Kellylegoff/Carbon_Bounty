@@ -28,12 +28,9 @@
       <div class="container mt-5" >
         <h3 class= "text">Produit IoT sélectionné :</h3>
         <% @casesiot.iotproduct %>
-        <h4 class= "text">Nom</h4>
-        <p><%= @casesiot.iotproduct.product_name%></p>
-        <p class = "paragraph">Type</p>
-        <p class = "paragraph"><%= @casesiot.iotproduct.product_type%></p>
-        <p class = "paragraph">Constructeur</p>
-        <p class = "paragraph"><%= @casesiot.iotproduct.constructor%></p>
+        <p class= "paragraph">Nom : <%= @casesiot.iotproduct.product_name%></p>
+        <p class = "paragraph">Type : <%= @casesiot.iotproduct.product_type%></p>
+        <p class = "paragraph">Constructeur : <%= @casesiot.iotproduct.constructor%></p>
         <%# <h3>Description</h3> %>
         <%# <%= @casesiot.iotproduct.description%>
         <h5>Eco_score : <%= @casesiot.iotproduct.eco_score%> /100 </h5>
