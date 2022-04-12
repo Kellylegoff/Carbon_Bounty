@@ -23,13 +23,14 @@ class UsecasesController < ApplicationController
       @usecases = Usecase.search_by_use_cases(params[:query])
     else
       @usecases = Usecase.all
+
     end
     params[:query] = ""
   end
 
   def render_404
     respond_to do |format|
-      format.html { render :file => "#{Rails.root}/public/422.html", :layout => false, :status => :not_found }
+      format.html { render :file => "#{Rails.root}/public/500.html", :layout => false, :status => :not_found }
       format.xml  { head :not_found }
       format.any  { head :not_found }
     end
@@ -39,6 +40,9 @@ class UsecasesController < ApplicationController
 
   def set_usecase
     @usecase = Usecase.find(params[:id])
+    my_array = []
+    @usecase.casesiots.each { |item| my_array << [Iotproduct.find(item.iotproduct_id), item] }
+    @results = my_array.sort_by { |ar| ar.first.eco_score }.reverse
   end
 
   def usecase_params

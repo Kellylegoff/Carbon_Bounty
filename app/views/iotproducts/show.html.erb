@@ -7,7 +7,9 @@
       <%# <% content_for :meta_image, cl_image_path(@iotproduct.photo.path) %>
     <div class="fiche" >
         <div class = "produit d-flex">
-          <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill%>
+          <% if @iotproduct.photo.attached? %>
+            <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill%>
+          <% end %>
           <div class = "liste">
             <ul>
                 <li>

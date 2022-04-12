@@ -1,14 +1,14 @@
 <h2 class = "usecase-header">Afin de <%= @usecase.name %> nous vous recommandons les solutions connectées suivantes:</h2>
 <div class = "container">
   <div class = "row">
-      <% @usecase.casesiots.each do |result|%>
-      <div class = "col-6">
-        <%= render '/iotproducts/ficheproduit', result: result.iotproduct %>
-        <div class = "discover">
-        <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result, result.iotproduct.id), class: "btn-green" %>
-        </div>
+    <% @results.each do |result|%>
+    <div class = "col-6">
+      <%= render '/iotproducts/ficheproduit', result: result.first %>
+      <div class = "discover">
+       <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result.last, result.first), class: "btn-green" %>
       </div>
-        <% end %>
-        <a name = "options"></a>
     </div>
+    <% end %>
+    <a name = "options"></a>
+  </div>
 </div>

@@ -17,7 +17,11 @@
                 <li class="nav-item dropdown">
                 <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649247595/CarbonBounty/Ic%C3%B4ne_Carbon_Bounty_tgfh3a.png", class: "avatar dropdown-toggle rotating", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "Cas d'usages", usecases_path, class: "dropdown-item" %>
+                  <%= link_to "home", root_path, class: "dropdown-item" %>
+                  <%= link_to "Cas d'usage", usecases_path, class: "dropdown-item" %>
+                  <% if current_user.admin == true %>
+                  <%= link_to "Admin", rails_admin_path, class: "dropdown-item" %>
+                  <% end %>
                   <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>

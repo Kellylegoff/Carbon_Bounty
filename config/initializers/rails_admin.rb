@@ -14,7 +14,6 @@ RailsAdmin.config do |config|
       redirect_to main_app.root_path
     end
   end
-
   ## == CancanCan ==
   # config.authorize_with :cancancan
 
@@ -46,3 +45,4 @@ RailsAdmin.config do |config|
     # history_show
   end
 end
+RailsAdmin.config {|c| c.label_methods << :rails_admin_title }
