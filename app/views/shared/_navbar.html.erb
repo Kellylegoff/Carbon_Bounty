@@ -11,7 +11,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <% if user_signed_in? %>
-          <div class = "d-flex space-between">
               <li class="nav-item">
                 <%= link_to "La marche à suivre", "#marche", class: "nav-link" %>
                 </li>
@@ -22,7 +21,6 @@
                   <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>
-          </div>
         <% else %>
           <li class="nav-item active">
             <%= link_to "Qui sommes nous?", "#about", class: "nav-link" %>
