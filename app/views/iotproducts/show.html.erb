@@ -1,9 +1,10 @@
+ <h2 class = "usecase-header"> Voici la fiche détaillée :</h2>
+
 <section class = "container-product">
     <% @iotproduct %>
       <% content_for :meta_title, "#{@iotproduct.product_name} is on #{DEFAULT_META["meta_product_name"]}" %>
       <% content_for :meta_description, @iotproduct.description %>
       <%# <% content_for :meta_image, cl_image_path(@iotproduct.photo.path) %>
-
     <div class="fiche" >
         <div class = "produit d-flex">
           <%= cl_image_tag @iotproduct.photo.key, height: 300, width: 400, crop: :fill%>
@@ -22,7 +23,7 @@
                 </li>
                 <li>
                   <h6>Eco score: </h6>
-                  <p><%= @iotproduct.eco_score%></p>
+                  <p><%= @iotproduct.eco_score%> / 100</p>
                 </li>
                 <li>
                   <h6>Ce produit repond egalement à d’autres cas d’usage: </h6>

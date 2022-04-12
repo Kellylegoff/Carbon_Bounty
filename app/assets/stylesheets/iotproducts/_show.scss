@@ -3,7 +3,6 @@
   margin: 0 auto;
   background-color: $white;
   background-position: center;
-  margin-top: 15%;
 }
 
 h2 {
@@ -89,7 +88,9 @@ p {
 
 .produit-partiale {
   height: 250px;
+  display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   padding: 3%;
   text-align: start;
 }
