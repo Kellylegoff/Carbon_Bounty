@@ -1,5 +1,8 @@
 <div class = "container-product">
     <% @iotproduct %>
+      <% content_for :meta_title, "#{@iotproduct.product_name} is on #{DEFAULT_META["meta_product_name"]}" %>
+      <% content_for :meta_description, @iotproduct.description %>
+      <%# <% content_for :meta_image, cl_image_path(@iotproduct.photo.path) %>
 
       <div class="fiche" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
          <div class = "produit d-flex">

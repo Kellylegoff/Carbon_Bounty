@@ -4,6 +4,8 @@ class UsecasesController < ApplicationController
   end
 
   def show
+    # render_404
+
     set_usecase
     # @find_usecase = Casesiot.where(usecase: @usecase.id)
     # @find_iotproduct = Iotproduct.where(id: @find_usecase.iotproduct_id)
@@ -23,6 +25,14 @@ class UsecasesController < ApplicationController
       @usecases = Usecase.all
     end
     params[:query] = ""
+  end
+
+  def render_404
+    respond_to do |format|
+      format.html { render :file => "#{Rails.root}/public/422.html", :layout => false, :status => :not_found }
+      format.xml  { head :not_found }
+      format.any  { head :not_found }
+    end
   end
 
   private
