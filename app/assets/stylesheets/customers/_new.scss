@@ -2,9 +2,9 @@
   background-color: antiquewhite;
 }
 
-.h4 {
+.title-black {
   padding: 3%;
-  font-size: 16px;
+  font-size: 24px;
   color: $carbon_black;
 }
 
@@ -23,4 +23,11 @@
 .paragraph {
   color: $carbon_black;
   text-align: center;
+}
+
+.title-green {
+  padding: 3%;
+  font-size: 24px;
+  color: $carbon_green;
+  font-weight: bolder;
 }
