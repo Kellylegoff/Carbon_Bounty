@@ -1,9 +1,12 @@
 <h2>Afin de <%= @usecase.name %> nous vous recommandons les solutions connectées suivantes:</h2>
-<div class = "container col-6">
-  <% @usecase.casesiots.each do |result|%>
+<div class = "container">
   <div>
-  <%= render '/iotproducts/ficheproduit', result: result.iotproduct %>
-    <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result, result.iotproduct.id), class: "btn-green" %>
+      <% @usecase.casesiots.each do |result|%>
+      <div class = "solutions col-lg-5 m-3 ">
+        <%= render '/iotproducts/ficheproduit', result: result.iotproduct %>
+        <%= link_to "Decouvrir la fiche produit", casesiot_iotproduct_path(result, result.iotproduct.id), class: "btn-green" %>
+      </div>
+        <% end %>
     </div>
-    <% end %>
+    <a name = "options"></a>
 </div>
