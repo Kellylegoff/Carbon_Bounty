@@ -1,5 +1,5 @@
   <section class="fiche">
-    <div class = "produit-partiale d-flex">
+    <div class = "produit-partiale">
       <div class = "image"><%= cl_image_tag result.photo.key, height: 180, width: 180, crop: :fill%></div>
         <div class = "liste">
           <ul>
@@ -12,7 +12,7 @@
             </li>
             <li>
               <h6>Eco score </h6>
-              <p><%= result.eco_score%></p>
+              <p><%= result.eco_score%> / 100</p>
             </li>
           </ul>
         </div>
