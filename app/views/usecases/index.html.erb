@@ -1,6 +1,6 @@
 
 <div class = "container">
-
+  <% content_for :meta_title, "#{@usecases.name} is on #{DEFAULT_META["meta_product_name"]}" %>
   <h2 class="text-center m-3 animate__animated animate__fadeInDown">Veuillez sélectionner votre cas d'usage</h2>
   <%= form_tag usecases_path, method: :get do %>
     <%= text_field_tag :query,
@@ -12,11 +12,7 @@
   <% end %>
   <div class="row justify-content-center">
     <% @usecases.each do |usecase| %>
-
-      <div class="card-product col-lg-5 m-2 animate__animated animate__fadeInUp"
-Leal Jonathan  5:46 PM
-style="background-image:url(https://res.cloudinary.com/mavana/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1649432920/CarbonBounty/greenleaf_55ebc44f12757972_y6yoo6.jpg)">
-
+      <div class="card-product col-lg-5 m-2 animate__animated animate__fadeInUp" style="background-image:url(https://res.cloudinary.com/mavana/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1649432920/CarbonBounty/greenleaf_55ebc44f12757972_y6yoo6.jpg)">
         <div class="card-product-infos">
           <%= link_to usecase.name, usecase_path(usecase) %>
         </div>
