@@ -1,0 +1,19 @@
+.grid-displayer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  // grid-auto-rows: minmax(100px, auto);
+  // .btn-green {
+  //   size: 20px;
+  // }
+}
+
+.solution {
+  max-width: 90%;
+  min-width: 460px;
+  // min-height: 70%;
+}
+
+.discover {
+  padding-top: 4%;
+}
