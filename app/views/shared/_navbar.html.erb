@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649247569/CarbonBounty/Logo_Carbon_Bounty_l8ajfq.png", class: "animate__animated animate__fadeInRight animate__delay-1s", width: 140, height: 60, crop: :fit %>
     <% end %>
 
@@ -9,22 +9,24 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav">
         <% if user_signed_in? %>
+          <div class = "d-flex space-between">
+              <li class="nav-item">
+                <%= link_to "La marche à suivre", "#marche", class: "nav-link" %>
+                </li>
+                <li class="nav-item dropdown">
+                <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649247595/CarbonBounty/Ic%C3%B4ne_Carbon_Bounty_tgfh3a.png", class: "avatar dropdown-toggle rotating", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Cas d'usages", usecases_path, class: "dropdown-item" %>
+                  <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+              </li>
+          </div>
+        <% else %>
           <li class="nav-item active">
             <%= link_to "Qui sommes nous?", "#about", class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Le projet", usecases_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649247595/CarbonBounty/Ic%C3%B4ne_Carbon_Bounty_tgfh3a.png", class: "avatar dropdown-toggle rotating", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Cas d'usages", usecases_path, class: "dropdown-item" %>
-              <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
           <li class="nav-item">
             <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
           </li>
