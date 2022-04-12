@@ -2,7 +2,7 @@
 <div class="home-container">
     <section class = "simulation d-flex">
       <div class="demarrage">
-      <h3>Carbon Bounty</h3>
+      <h2>Carbon Bounty</h2>
       <p>Carbon Bounty, trouver le meilleur compromis entre efficacité environnementale, économique, technologique et social.</p>
       <%= link_to "Commencez votre simulation gratuite", usecases_path, class:"btn-green" %>
       </div>
@@ -10,9 +10,10 @@
       <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649264996/CarbonBounty/Groupe_187_wftmpl.png", class: "animate__animated animate__slideInRight animate__delay-1s", width: 700, height: 600, crop: :fit %>
       </div>
     </section>
+    <a id = "about"></a>
     <section class = "about d-flex">
     <div>
-      <h3> En savoir plus au sujet de Carbon Bounty</h3><a id = "about"></a>
+      <h3> En savoir plus au sujet de Carbon Bounty</h3>
         <p>La raison d’être de Carbon Bounty est d’aider les entreprises et collectivités à identifier dans leurs activités quotidiennes les émissions de gaz à effet de serre qui peuvent être réduites à l’aide d’objets connectés.
         Cet outil doit permettre aux organisations de cartographier de manière intuitive leurs activités et de recevoir des recommandations de solutions connectées, écoresponsables et pertinentes pour leur situation
         Carbon Bounty® est un logiciel d’aide à la décision pour les porteurs de projets qui souhaitent prendre en compte la triple dimension financière, environnementale et sociétale de leurs projets</p>
@@ -20,7 +21,7 @@
     <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649265010/CarbonBounty/undraw_welcoming_re_x0qo_1_nv75fo.png", class: "animate__animated animate__slideInRight animate__delay-1s", width: 400, height: 400, crop: :fit %>
     </section>
 
-    <section class = "projet">
+    <section class = "projet"><a id = "marche"></a>
       <h3>LA MARCHE À SUIVRE</h3>
       <div class = "timeline">
       <p>Je définis le périmètre de mon projet et de mes objectifs.</p>
@@ -34,21 +35,24 @@
     </section>
 
     <section class = "contact d-flex">
+      <div>
+        <h3>CARBON BOUNTY</h3>
+        <p>L’IoT pour l’environnement</p>
+        <%# <%= form_with url: false do |form| %>
+        <%# <%= form.text_field :email %>
+        <%# <% end %>
+      </div>
+      <div>
+        <h3>LES PAGES</h3>
+          <li><%= link_to "Qui sommes nous?", "#about"%></li>
+          <li><%= link_to "Le Projet", "#"%></li>
+          <li><%= link_to "La marche à suivre", "#marche"%></li>
+          <li><%= link_to "Pourquoi nous choisir?", "#"%></li>
+          <li><%= link_to "Nos plans et formules", "#"%></li>
+          <li><%= link_to "FAQ", "#"%></li>
+          <li><%= link_to "Contact", "#"%></li>
+      </div>
       <%= image_tag "https://res.cloudinary.com/mavana/image/upload/v1649264991/CarbonBounty/D%C3%A9coration_bulles_jztn9a.png", width: 250, height: 250, crop: :fit %>
-      <div>
-      <h3>CARBON BOUNTY</h3>
-      <p>L’IoT pour l’environnement</p>
-      </div>
-      <div>
-      <h3>LES PAGES</h3>
-      <li>Qui sommes-nous ?</li>
-      <li>Le projet</li>
-      <li>La marche à suivre</li>
-      <li>Pourquoi nous choisir ?</li>
-      <li>Nos plans & formules</li>
-      <li>FAQ</li>
-      <li>Contact</li>
-      </div>
     </section>
 
 </div>

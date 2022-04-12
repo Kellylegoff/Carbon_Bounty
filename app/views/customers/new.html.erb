@@ -1,11 +1,11 @@
 
-<div class="container py-5">
+<div class="container py-5 containe-customer">
   <div class="row justify-content-center">
     <div class="col-lg-5 m-2">
-      <div class="rounded p-3 shadow">
-        <h3>Creez votre fiche contact pour prendre rendez-vous avec un expert pour vous accompagner </h3>
-        <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color" } }) do |f| %>
-          <%= f.input :company_name, label: "Nom de la société" %>
+      <div class="rounded p-3 shadow form-login-green">
+        <h4>Creez votre fiche contact pour prendre rendez-vous avec un expert pour vous accompagner</h4>
+        <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color bg-white" } }) do |f| %>
+          <%= f.input :company_name, label:"Nom de la société" %>
           <%= f.input :address, label: "Adresse de la société"%>
           <%= f.input :phone, label: "Numéro de téléphone" %>
           <%= f.input :contact_first_name, label: "Prénom du contact"%>
@@ -18,29 +18,26 @@
         <% end %>
       </div>
     </div>
-    <div class="col-lg-5 m-2 p-3 shadow d-flex flex-column">
+    <div class="col-lg-5 m-2 p-3 shadow d-flex flex-column container-customer">
 
       <div class="container">
-        <h1>Votre Cas d'usage</h1>
-        <h3><%= @casesiot.usecase.name %></p>
+        <h1 class= "title">Fiche Récapitulative</h1>
+        <h3 class= "text">Le cas d'usage sélectionné :</h3>
+        <h4 class= "text"><%= @casesiot.usecase.name %> </h4>
       </div>
       <div class="container mt-5" >
-        <h1>Produit IoT sélectionné </h1>
+        <h3 class= "text">Produit IoT sélectionné :</h3>
         <% @casesiot.iotproduct %>
-        <h3>Nom</h3>
-        <%= @casesiot.iotproduct.product_name%>
-        <h3>Type</h3>
-        <%= @casesiot.iotproduct.product_type%>
-        <h3>Constructeur</h3>
-        <%= @casesiot.iotproduct.constructor%>
+        <p class= "paragraph">Nom : <%= @casesiot.iotproduct.product_name%></p>
+        <p class = "paragraph">Type : <%= @casesiot.iotproduct.product_type%></p>
+        <p class = "paragraph">Constructeur : <%= @casesiot.iotproduct.constructor%></p>
         <%# <h3>Description</h3> %>
         <%# <%= @casesiot.iotproduct.description%>
-        <h5>Eco_score</h5>
-        <%= @casesiot.iotproduct.eco_score%>
+        <h5 class = "title-green">Eco_score : <%= @casesiot.iotproduct.eco_score%> /100 </h5>
 
       </div>
       <div class="mt-auto mb-2">
-        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct), class: "btn-orange" %>
+        <%= link_to "Revoir les autres recommandations", usecases_path(@iotproduct), class: "btn-black" %>
       </div>
     </div>
   </div>

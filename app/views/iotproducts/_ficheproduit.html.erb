@@ -1,8 +1,8 @@
-<div class = "container-product">
-  <section class="fiche col" style="background-image: url(https://res.cloudinary.com/mavana/image/upload/v1649264993/CarbonBounty/Groupe_186_aeqzra.png);" >
-    <div class = "produit">
+
+  <section class="fiche">
+    <div class = "produit-partiale">
       <% if  result.photo.attached?%>
-      <div class = "image"><%= cl_image_tag result.photo.key, height: 300, width: 400, crop: :fill%></div>
+      <div class = "image"><%= cl_image_tag result.photo.key, height: 180, width: 180, crop: :fill%></div>
       <% end %>
         <div class = "liste">
           <ul>
@@ -13,11 +13,15 @@
               <h6>Type de produit: </h6>
               <p><%= result.product_type%></p>
             </li>
+            <li>
+              <h6>Eco score </h6>
+              <p><%= result.eco_score%> / 100</p>
+            </li>
           </ul>
         </div>
     </div>
-    <section class = "grid ">
-      <div data-controller="visibility">
+    <section>
+      <div class = "row" data-controller="visibility">
           <%# <button data-action="visibility#showTargets">Show All Elements</button> %>
           <%# <button data-action="visibility#hideTargets">Hide All Elements</button> %>
           <a href ="#options"><button class = "btn-green" data-action = "visibility#toggleTargets">Ce produit repond egalement à d’autres cas d’usage:</button></a>
@@ -25,13 +29,11 @@
         <%# <p data-visibility-target="hideable">The Flamboyent Thing #1</p> %>
         <%# <p data-visibility-target="hideable" hidden>The Slightly Stealthy Thing #2</p> %>
         <% result.casesiots.each do |rec|%>
-        <div id = "rec" class = "col-6">
-          <p data-visibility-target="hideable" hidden style = "text-display: block; border: solid; border-radius: 4px; ">
+        <div class = "rec col-4">
+          <p data-visibility-target="hideable" hidden>
           <%= rec.usecase.name %></p>
         </div>
       <% end %>
       </div>
-       <a name = "options"></a>
     </section>
   </section>
- </div>
