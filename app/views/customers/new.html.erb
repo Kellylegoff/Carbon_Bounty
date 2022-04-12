@@ -3,7 +3,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-5 m-2">
       <div class="rounded p-3 shadow form-login-green">
-        <h5>Creez votre fiche contact pour prendre rendez-vous avec un expert pour vous accompagner </h3>
+        <h4>Creez votre fiche contact pour prendre rendez-vous avec un expert pour vous accompagner</h4>
         <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color bg-white" } }) do |f| %>
           <%= f.input :company_name, label:"Nom de la société" %>
           <%= f.input :address, label: "Adresse de la société"%>
