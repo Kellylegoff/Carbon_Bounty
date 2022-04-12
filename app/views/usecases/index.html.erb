@@ -5,10 +5,10 @@
   <%= form_tag usecases_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control text-color bg-white",
+      class: "form-control text-color bg-white searchbar",
       placeholder: "Trouvez un cas d'usage..."
     %>
-    <%= submit_tag "Rechercher", class: "btn-black mt-2" %>
+    <%= submit_tag "Rechercher", class: "btn-black my-3" %>
   <% end %>
   <div class="row justify-content-center">
     <% @usecases.each do |usecase| %>
