@@ -1,4 +1,4 @@
-
+<%= javascript_pack_tag 'tooltip' %>
   <section class="fiche">
     <div class = "produit-partiale">
       <% if  result.photo.attached?%>
@@ -11,11 +11,11 @@
             </li>
             <li>
               <h6>Type de produit: </h6>
-              <p><%= result.product_type%></p>
+              <p class="product_type"><%= result.product_type%></p>
             </li>
             <li>
               <h6>Eco score </h6>
-              <p><%= result.eco_score%> / 100</p>
+              <p class="product_eco"><%= result.eco_score%> / 100</p>
             </li>
           </ul>
         </div>
