@@ -2,7 +2,7 @@
 <div class="container py-5 containe-customer">
   <div class="row justify-content-center">
     <div class="col-lg-5 m-2">
-      <div class="rounded p-3 shadow form-login-green">
+      <div class="rounded p-3 shadow form-login-green" style="background-color:#005f73;">
         <h4>Creez votre fiche contact pour prendre rendez-vous avec un expert pour vous accompagner</h4>
         <%= simple_form_for([@casesiot, @customer], :defaults => { :input_html => { :class => "text-color bg-white" } }) do |f| %>
           <%= f.input :company_name, label:"Nom de la société" %>
@@ -18,7 +18,7 @@
         <% end %>
       </div>
     </div>
-    <div class="col-lg-5 m-2 p-3 shadow d-flex flex-column container-customer">
+    <div class="col-lg-5 m-2 p-3 shadow d-flex flex-column container-customer" style="background-color:#005f73;">
 
       <div class="container">
         <h1 class= "title">Fiche Récapitulative</h1>
