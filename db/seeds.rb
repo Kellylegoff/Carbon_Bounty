@@ -25,12 +25,12 @@ UC17 = Usecase.create({name: "télégérer une machine"})
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-IOTP1 = Iotproduct.create({product_name: 'Flexidry'})
+IOTP1 = Iotproduct.create({product_name: 'Flexidry', eco_score: "56" })
 IOTP2 = Iotproduct.create({product_name: 'CO2 , TEMPERATURE, HUMIDITY AND BAROMETRIC PRESSURE SENSOR FOR LORAWAN ®',
 product_type: "End node", constructor: "Decentlab GmbH", eco_score: "82"})
-IOTP3 = Iotproduct.create({product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®'})
-IOTP4 = Iotproduct.create({product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®'})
-IOTP5 = Iotproduct.create({product_name: 'K-Hub'})
+IOTP3 = Iotproduct.create({product_name: 'INDOOR AMBIANCE MONITOR INCLUDING CO₂, TVOC AND MOTION SENSOR FOR LoRaWAN®', eco_score: "77"})
+IOTP4 = Iotproduct.create({product_name: 'ANALOG OR DIGITAL SENSOR DEVICE FOR LoRaWAN®', eco_score: "66"})
+IOTP5 = Iotproduct.create({product_name: 'K-Hub', eco_score: "44"})
 
 REC1_1 = Casesiot.create(iotproduct: IOTP1, usecase: UC14)
 REC1_2 = Casesiot.create(iotproduct: IOTP1, usecase: UC15)

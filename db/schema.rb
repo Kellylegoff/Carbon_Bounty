@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_13_101804) do
+ActiveRecord::Schema.define(version: 2022_04_13_104601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,12 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
     t.index ["usecase_id"], name: "index_customerusecases_on_usecase_id"
   end
 
+  create_table "fonctions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "iotproducts", force: :cascade do |t|
     t.string "product_name"
     t.string "product_type"
@@ -85,6 +91,29 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
+  end
+
+  create_table "mesures", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "objetfonctions", force: :cascade do |t|
+    t.bigint "mesure_id", null: false
+    t.bigint "objet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "fonctions_id"
+    t.index ["fonctions_id"], name: "index_objetfonctions_on_fonctions_id"
+    t.index ["mesure_id"], name: "index_objetfonctions_on_mesure_id"
+    t.index ["objet_id"], name: "index_objetfonctions_on_objet_id"
+  end
+
+  create_table "objets", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "usecases", force: :cascade do |t|
@@ -113,4 +142,7 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
   add_foreign_key "customers", "users"
   add_foreign_key "customerusecases", "customers"
   add_foreign_key "customerusecases", "usecases"
+  add_foreign_key "objetfonctions", "fonctions", column: "fonctions_id"
+  add_foreign_key "objetfonctions", "mesures"
+  add_foreign_key "objetfonctions", "objets"
 end
