@@ -1,7 +1,6 @@
 .container-product {
   width: 90%;
   margin: 0 auto;
-  background-color: $white;
   background-position: center;
 }
 
@@ -15,15 +14,14 @@ h2 {
 // }
 
 .fiche {
- background-color: $white;
- background-position: center;
- // background-size: contain;
- background-size: cover;
- background-repeat: no-repeat;
- // height: 300;
- // width: 100%;
- text-shadow: 7em;
- border-radius: 5px;
+background-position: center;
+// background-size: contain;
+background-size: cover;
+background-repeat: no-repeat;
+// height: 300;
+// width: 100%;
+border-radius: 5px;
+text-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
 }
 // width:400px;height:200px;
 
@@ -93,4 +91,21 @@ p {
   justify-content: space-between;
   padding: 3%;
   text-align: start;
+}
+
+.bimg{
+  // background-image: rgba(0,0,0,0.5), url("https://res.cloudinary.com/mavana/image/upload/v1649264998/CarbonBounty/Groupe_188_zbyukm.png");
+background: linear-gradient(rgba(0, 0, 0, -0.6), rgba(0, 0, 0, 0.2)),
+                  url("https://res.cloudinary.com/mavana/image/upload/v1649264998/CarbonBounty/Groupe_188_zbyukm.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border-radius: 5px;
+}
+
+
+.title-info{
+  font-family: 'Poppins';
+  color: black;
+  font-size: 26px;
 }
