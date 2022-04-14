@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_13_101804) do
+ActiveRecord::Schema.define(version: 2022_04_13_145028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
     t.index ["usecase_id"], name: "index_casesiots_on_usecase_id"
   end
 
+  create_table "composants", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string "company_name"
     t.string "address"
@@ -77,6 +83,23 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
     t.index ["usecase_id"], name: "index_customerusecases_on_usecase_id"
   end
 
+  create_table "fonction_composant_iotproducts", force: :cascade do |t|
+    t.bigint "fonction_id", null: false
+    t.bigint "iotproduct_id", null: false
+    t.bigint "composant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["composant_id"], name: "index_fonction_composant_iotproducts_on_composant_id"
+    t.index ["fonction_id"], name: "index_fonction_composant_iotproducts_on_fonction_id"
+    t.index ["iotproduct_id"], name: "index_fonction_composant_iotproducts_on_iotproduct_id"
+  end
+
+  create_table "fonctions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "iotproducts", force: :cascade do |t|
     t.string "product_name"
     t.string "product_type"
@@ -87,13 +110,44 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
     t.text "description"
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string "session_id", null: false
-    t.text "data"
+  create_table "mesures", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
-    t.index ["updated_at"], name: "index_sessions_on_updated_at"
+  end
+
+  create_table "objetfonctions", force: :cascade do |t|
+    t.bigint "mesure_id", null: false
+    t.bigint "objet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "fonctions_id"
+    t.index ["fonctions_id"], name: "index_objetfonctions_on_fonctions_id"
+    t.index ["mesure_id"], name: "index_objetfonctions_on_mesure_id"
+    t.index ["objet_id"], name: "index_objetfonctions_on_objet_id"
+  end
+
+  create_table "objets", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "odds", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "spec_usecases", force: :cascade do |t|
+    t.bigint "odd_id", null: false
+    t.bigint "fonction_id", null: false
+    t.bigint "usecase_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fonction_id"], name: "index_spec_usecases_on_fonction_id"
+    t.index ["odd_id"], name: "index_spec_usecases_on_odd_id"
+    t.index ["usecase_id"], name: "index_spec_usecases_on_usecase_id"
   end
 
   create_table "usecases", force: :cascade do |t|
@@ -122,4 +176,13 @@ ActiveRecord::Schema.define(version: 2022_04_13_101804) do
   add_foreign_key "customers", "users"
   add_foreign_key "customerusecases", "customers"
   add_foreign_key "customerusecases", "usecases"
+  add_foreign_key "fonction_composant_iotproducts", "composants"
+  add_foreign_key "fonction_composant_iotproducts", "fonctions"
+  add_foreign_key "fonction_composant_iotproducts", "iotproducts"
+  add_foreign_key "objetfonctions", "fonctions", column: "fonctions_id"
+  add_foreign_key "objetfonctions", "mesures"
+  add_foreign_key "objetfonctions", "objets"
+  add_foreign_key "spec_usecases", "fonctions"
+  add_foreign_key "spec_usecases", "odds"
+  add_foreign_key "spec_usecases", "usecases"
 end
