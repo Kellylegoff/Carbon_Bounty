@@ -1,4 +1,5 @@
  <%= javascript_pack_tag 'tooltip' %>
+ <div class="sunshine">
  <h2 class = "usecase-header"> Voici la fiche détaillée :</h2>
 
 <section class = "container-product">
@@ -19,7 +20,7 @@
                 </li>
                 <li>
                   <h6>Type de produit: </h6>
-                  <p class="product_type tooltips" ><%= @iotproduct.product_type%></p>
+                  <p class="product_type tooltips" data-toggle="tooltip" data-placement="top" title="End node (objet / capteur standalone). Gateway/routeur (objet communiquant générique). Starter Kit (objet communiquant non industrialisé). Module (radio communiquant multi-purpose)"><%= @iotproduct.product_type%></p>
                 </li>
                 <li>
                   <h6>Constructeur: </h6>
@@ -27,7 +28,8 @@
                 </li>
                 <li>
                   <h6>Eco score: </h6>
-                  <p class="product_eco tooltips" ><%= @iotproduct.eco_score%> / 100</p>
+                  <p class="product_eco tooltips" data-toggle="tooltip" data-placement="top" title="Score calculé en fonction des facteurs d'émission.
+Plus le score est élevé et plus la solution présente une performance environnementale intéressante."><%= @iotproduct.eco_score%> / 100</p>
                 </li>
                 <li>
                   <h6>Ce produit repond egalement à d’autres cas d’usage: </h6>
@@ -48,3 +50,4 @@
         </div>
       </div>
 </section>
+</div>
