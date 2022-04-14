@@ -1,5 +1,6 @@
 <%= javascript_pack_tag 'tooltip' %>
   <section class="fiche">
+  <div class="bimg">
     <div class = "produit-partiale">
       <% if  result.photo.attached?%>
       <div class = "image"><%= cl_image_tag result.photo.key, height: 180, width: 180, crop: :fill%></div>
@@ -7,7 +8,7 @@
         <div class = "liste">
           <ul>
             <li>
-              <h5><%= result.product_name%></h5>
+              <h5 class="title-info"><%= result.product_name%></h5>
             </li>
             <li>
               <h6>Type de produit: </h6>
@@ -36,4 +37,5 @@
       <% end %>
       </div>
     </section>
+    </div>
   </section>

@@ -2,6 +2,7 @@
  <h2 class = "usecase-header"> Voici la fiche détaillée :</h2>
 
 <section class = "container-product">
+  <div class="bimg">
     <% @iotproduct %>
       <% content_for :meta_title, "#{@iotproduct.product_name} is on #{DEFAULT_META["meta_product_name"]}" %>
       <% content_for :meta_description, @iotproduct.description %>
@@ -14,7 +15,7 @@
           <div class = "liste">
             <ul>
                 <li>
-                  <h5><%= @iotproduct.product_name%></h5>
+                  <h5 class="title-info"><%= @iotproduct.product_name%></h5>
                 </li>
                 <li>
                   <h6>Type de produit: </h6>
@@ -45,4 +46,5 @@
           <%= link_to "Revoir les autres recommandations", usecase_path(@casesiot.usecase), class: "btn-green" %>
           <%= link_to "Choisir cette solution", new_casesiot_customer_path(@casesiot), class: "btn-green" %>
         </div>
+      </div>
 </section>
