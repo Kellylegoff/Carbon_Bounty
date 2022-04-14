@@ -33,5 +33,11 @@
 }
 
 .sunshine{
-  background: radial-gradient(circle, rgba(255,225,126,1) 0%, rgba(254,126,58,1) 100%);
+  background: rgb(255,225,126);
+  background: radial-gradient(circle, rgba(255,225,126,1) 11%, rgba(255,178,73,1) 94%);
+}
+
+.bg-carbon-orange{
+    background: $carbon_orange;
+
 }
